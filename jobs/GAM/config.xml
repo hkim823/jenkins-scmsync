@@ -6,16 +6,6 @@
   <properties>
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
-        <hudson.model.ChoiceParameterDefinition>
-          <name>cod</name>
-          <description></description>
-          <choices class="java.util.Arrays$ArrayList">
-            <a class="string-array">
-              <string>create</string>
-              <string>delete</string>
-            </a>
-          </choices>
-        </hudson.model.ChoiceParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>u</name>
           <description>Desired Username </description>
@@ -68,7 +58,7 @@
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd $WORKSPACE
-python $WORKSPACE/account-management/user.py -n --no-welcome $cod -u $u -f $f -l $l -m $m -n</command>
+python $WORKSPACE/account-management/user.py -n --no-welcome create -u $u -f $f -l $l -m $m</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command></command>
