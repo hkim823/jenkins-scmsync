@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>Google Apps Manager</description>
+  <description>Google Apps Manager, this will send welcome letter automatically.</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.model.ParametersDefinitionProperty>
@@ -55,14 +55,11 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cp /Users/han/gam-edx/oauth2.txt $WORKSPACE/account-management/gam-3.03/
-cp /Users/han/.google $WORKSPACE</command>
+cp /Users/han/.google $WORKSPACE/account-management/gam-3.03/</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
-      <command>cd $WORKSPACE
-python $WORKSPACE/account-management/user.py -n --no-welcome create -u $u -f $f -l $l -m $m</command>
-    </hudson.tasks.Shell>
-    <hudson.tasks.Shell>
-      <command></command>
+      <command>cd $WORKSPACE/account-management/
+python user.py -n create -u $u -f $f -l $l -m $m</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
