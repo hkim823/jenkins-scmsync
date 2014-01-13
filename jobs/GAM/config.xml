@@ -39,7 +39,7 @@
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>*/han/account-management/gam</name>
+        <name>*/han/account-management/GAM</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
@@ -54,8 +54,8 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cp /Users/han/gam-edx/oauth2.txt $WORKSPACE/account-management/gam-3.03
-cp /Users/han/.google $WORKSPACE/account-management/gam-3.03</command>
+      <command>cp /Users/han/gam-edx/oauth2.txt $WORKSPACE/account-management/gam-3.03/
+cp /Users/han/.google $WORKSPACE</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd $WORKSPACE
